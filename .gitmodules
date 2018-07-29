@@ -1,0 +1,3 @@
+[submodule "KDE"]
+	path = KDE
+	url = kde:scratch/cordlandwehr/kde-beamer-theme.git
