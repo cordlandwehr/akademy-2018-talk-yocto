@@ -15,7 +15,7 @@
 \usepackage{listings}
 
 \title[Automotive ECUs with Yocto]{Short Dive into Building\newline Automotive ECUs with Yocto}
-\subtitle{About Yocto and how it can be used}
+\subtitle{First Steps into Yocto}
 \author{Andreas Cord-Landwehr}
 \date{\textnormal{August 12th, 2018\\[\medskipamount] Akademy 2018, Vienna}}
 
@@ -250,7 +250,7 @@
     \textbf{Poky = reference \& quick-start distro}
     \begin{itemize}
         \item reference distribution of the Yocto Project
-        \item contains BitBake: build system, task executor and scheduler
+        \item contains BitBake: build system, task scheduler and executor
         \item contains metadata (global definitions, build logic, packaging, etc.):
         \begin{enumerate}
             \item OpenEmbedded-Core (OE-Core)
@@ -270,7 +270,7 @@
     \begin{block}{The Need for SDKs}
     \begin{itemize}
         \item building Yocto is complex and extremly time \& space consuming
-        \item split responsibilities in a team: devlopment vs.\ integration
+        \item split responsibilities in a team: development vs.\ integration
         \item in industry, you might not want to disclose your source codes or build configuration to contractors
     \end{itemize}
     \end{block}
@@ -292,8 +292,9 @@
 \begin{frame}
     {Contents of a Typical Yocto System}
 
+    \vspace{-1em}
     \begin{center}
-    \includegraphics[width=.8\linewidth]{images/yocto-bsp}
+    \includegraphics[width=.6\linewidth]{images/yocto-structure}
     \end{center}
     \begin{itemize}
         \item always needed: OE-Core, BitBake
@@ -314,7 +315,7 @@
         \item provides build recipes for latest release of KF5
         \item provides all non-standard dependency recipes
         \item can easily be integrated into any (recent) Yocto project
-        \item Repository: \url{https://cgit.kde.org/yocto-meta-kde.git/}\\
+        \item Repository: \url{https://cgit.kde.org/yocto-meta-kf5.git/}\\
             $\rightarrow$ thanks to Johan Thelin \& Volker Krause
     \end{itemize}
 
@@ -338,7 +339,7 @@
         \item get a real development device (e.g. Raspberry, BeagleBone, i.MX6) and run your test system there\\
             $\rightarrow$ you will need a BSP layer for that\dots
         \item integrate \texttt{meta-qt5} and run a simple full-screen QML test application (or a console application, if you do not have a display)
-        \item ingegrate \texttt{meta-kf5} and (if you want) \texttt{meta-kde}
+        \item integrate \texttt{meta-kf5} and (if you want) \texttt{meta-kde}
     \end{enumerate}
 
 \end{frame}
@@ -355,6 +356,8 @@
             \url{https://www.yoctoproject.org/docs/2.5/ref-manual/ref-manual.html}
         \item OpenEmbedded Wiki\\
             \url{http://www.openembedded.org/wiki/Main_Page}
+        \item Qt for Embedded\\
+            \url{http://doc.qt.io/qt-5/embedded-linux.html}
     \end{itemize}
 \end{frame}
 
